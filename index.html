@@ -5,15 +5,30 @@
     <script src="main.js"></script>
   </head>
   <body>
-      <iframe  id="frame" src="https://www.zerotoone.com.br/wp-content/plugins/super-links/application/helpers/super-links-proxy.php?https://www.blooket.com/" onload="run()"></iframe>
+      <iframe  id="frame" src="https://www.zerotoone.com.br/wp-content/plugins/super-links/application/helpers/super-links-proxy.php?https://www.blooket.com/" onload="run()" height="750px"></iframe>
     <script>function run() {
 const iframe = document.querySelector("iframe").contentWindow;
+            
 
-iframe.eval(`document.body.style.backgroundColor = "blue"`)
+iframe.eval(`window.addEventListener('keydown', function (e) {
+    if (e.altKey) {
+        if (e.keyCode == 74) {
+            eval(prompt("entercode"))
+        }
+    }
+})`)
+            
 // this would turn the 1st iframe in document blue.
 
 
     
 }</script>
+      <style>
+      iframe {
+      width: 100%;
+          } body {
+              margin: 0;
+          }
+      </style>
   </body>
 </html>
