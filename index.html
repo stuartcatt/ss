@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My JavaScript Project</title>
+    <script src="main.js"></script>
+  </head>
+  <body>
+      <iframe  id="frame" src="https://www.zerotoone.com.br/wp-content/plugins/super-links/application/helpers/super-links-proxy.php?https://www.blooket.com/" onload="run()"></iframe>
+    <script>function run() {
+const iframe = document.querySelector("iframe").contentWindow;
+
+iframe.eval(`document.body.style.backgroundColor = "blue"`)
+// this would turn the 1st iframe in document blue.
+
+
+    
+}</script>
+  </body>
+</html>
